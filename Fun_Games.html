@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Games :)</title>
+    <script>
+        function openInNewTab(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    const newTab = window.open('about:blank', '_blank');
+                    newTab.document.write(html);
+                    newTab.document.close();
+                })
+                .catch(error => console.error('Error fetching the HTML:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Fun Games :)</h1>
+    <button onclick="openInNewTab('https://raw.githubusercontent.com/12treesarecool34/games-access0/refs/heads/main/Eaglercraft_access.html')">Eaglercraft</button>
+    <button onclick="openInNewTab('https://raw.githubusercontent.com/12treesarecool34/games-access0/refs/heads/main/Eaglercraft_WASM-GC_access.html')">Eaglercraft WASM-GC</button>
+    <button onclick="openInNewTab('https://raw.githubusercontent.com/12treesarecool34/games-access0/refs/heads/main/Flash_Emulator_access.html')">Flash Emulator</button>
+</body>
+</html>
